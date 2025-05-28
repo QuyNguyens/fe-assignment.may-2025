@@ -1,11 +1,15 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ProjectPage from './pages/project/ProjectPage';
 
 function App() {
 
   return (
     <>
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+      <Router>
+        <Routes>
+          <Route path="/" element={<ProjectPage />} />
+        </Routes>
+    </Router>
     </>
   )
 }
