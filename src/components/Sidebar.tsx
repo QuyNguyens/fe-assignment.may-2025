@@ -15,13 +15,13 @@ import AdministrationsIconHover from '../assets/administrations-icon-hover.svg?r
 import DocumentationIcon from '../assets/documentdation-icon.svg?react';
 import DocumentationIconHover from '../assets/documentdation-icon-hover.svg?react';
 import RiverflowIcon from '../assets/river-flow-icon.svg';
-
 interface SidebarProps{
     width: string;
     isSmall: boolean;
 }
 
 const Sidebar = ({width, isSmall}: SidebarProps) => {
+
   return (
     <div className={`${width} p-3 min-h-screen bg-gray-50 flex flex-col gap-8`}>
         <div className="flex gap-3 mt-1">
