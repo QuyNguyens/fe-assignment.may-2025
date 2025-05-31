@@ -10,7 +10,7 @@ const Header = () => {
             <img src={ArrowRight} alt="" />
             <span className='text-sm font-medium text-primary'>Work Packages</span>
         </div>
-        <div className='flex items-center gap-[10px] bg-primary py-2 px-5 rounded-full'>
+        <div className='flex items-center gap-[10px] bg-primary hover:bg-primary-hover py-2 px-5 rounded-full'>
           <img className='w-4 h-4' src={ViewIcon} alt="" />
           <span className='text-base16 font-medium text-white'>View Summary</span>
         </div>

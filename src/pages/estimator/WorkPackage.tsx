@@ -2,9 +2,34 @@ import TextBorderBottom from "../../components/TextBorderBottom";
 import SummaryIcon from '../../assets/sumary-icon-blue.svg';
 import SearchIcon from '../../assets/search-icon.svg';
 import ArrowRight from '../../assets/arrow-right-1-icon.svg';
-import WorkPackageItems from "./WorkPackageItems";
+import WorkPackageItems, {type WorkPackageItemData } from "./WorkPackageItems";
+import { workPackages } from "../../data/workPackages";
+import { useEffect, useState } from "react";
 
 const WorkPackage = () => {
+    const [workPackageInput, setWorkPackageInput] = useState<string>('');
+    const [packageItems, setPackageItems] = useState<WorkPackageItemData[]>([]);
+    const [debouncedValue, setDebouncedValue] = useState(workPackageInput);
+
+    useEffect(() => {
+        const handler = setTimeout(() => {
+            setDebouncedValue(workPackageInput);
+        }, 500);
+
+        return () => {
+            clearTimeout(handler);
+        };
+    }, [workPackageInput]);
+
+    useEffect(() => {
+        const newItems = workPackages.filter(item => item.title.toLowerCase().includes(workPackageInput?.toLowerCase()));
+        setPackageItems(newItems);
+    }, [debouncedValue]);
+
+    const handleSearch = (e: any) =>{
+        setWorkPackageInput(e.target.value);
+    }
+
   return (
     <div className="ml-12 mt-4 flex-1 flex flex-col">
         <h2 className="text-xl text-gray-800">Work Packages (WP)</h2>
@@ -42,9 +67,10 @@ const WorkPackage = () => {
                         <input
                             type="text"
                             className="pl-6 pr-2 text-sm text-gray-700 outline-none bg-transparent w-full"
+                            onChange={handleSearch}
                         />
                     </div>
-                    <WorkPackageItems/>
+                    <WorkPackageItems items={packageItems}/>
                 </div>
 
                 <div className="flex justify-end items-center mt-24 pb-3">

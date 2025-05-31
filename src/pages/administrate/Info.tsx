@@ -14,7 +14,7 @@ const Info = () => {
 
   const dispatch = useDispatch();
   return (
-      <div className="flex-1 flex flex-col justify-between border-r border-gray-300">
+      <div className="flex flex-col justify-between border-r border-gray-300">
         <div>
           <div className="flex items-center gap-3 py-[14px] pl-3">
             <span className="text-primary-100 text-xl font-bold">{totalUsers} USERS</span>

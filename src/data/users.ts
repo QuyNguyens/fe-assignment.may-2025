@@ -387,3 +387,43 @@ export const Users : User [] = [
     status: "ACTIVE"
   }
 ]
+
+export interface Client{
+  index: number;
+  borrowName: string;
+  loanId: string;
+  lender: string;
+  rate: string;
+  process: number;
+  status: string;
+}
+
+export const Clients : Client [] = [
+  {
+    index: 1,
+    borrowName: 'Ms. Hang Nguyen',
+    loanId: '#LA00001',
+    lender: 'AD Mortgage',
+    rate: '6% (6.168% APR)',
+    process: 68,
+    status: 'IN PROGRESS',
+  },
+  {
+    index: 2,
+    borrowName: 'Ms. Hang Nguyen',
+    loanId: '#LA00001',
+    lender: 'AD Mortgage',
+    rate: '6% (6.168% APR)',
+    process: 68,
+    status: 'IN PROGRESS',
+  },
+   {
+    index: 3,
+    borrowName: 'Ms. Hang Nguyen',
+    loanId: '#LA00001',
+    lender: 'AD Mortgage',
+    rate: '6% (6.168% APR)',
+    process: 100,
+    status: 'SUCCESS',
+  }
+]

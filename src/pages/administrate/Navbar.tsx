@@ -1,10 +1,15 @@
+import { useSelector } from 'react-redux';
 import FilterIcon from '../../assets/filter-icon.svg';
 import InputFilter from '../../components/InputFilter';
 import StatusFilter from './StatusFilter';
-import UsernameSelector from './UserNameSelector';
-import UserTypeSelector from './UserTypeSelector';
+import type { RootState } from '../../app/store';
+import SelectorType from './SelectorType';
 
 const Navbar = () => {
+  const userFull = useSelector((state: RootState) => state.users.fullList);
+  const users = userFull.map(user => user.userName);
+  const roles = [...new Set(userFull.map(user => user.role))];
+
   return (
     <div className="flex flex-col justify-between w-[253px] p-3 border-r border-gray-300">
       <div className="flex flex-col gap-4">
@@ -14,12 +19,12 @@ const Navbar = () => {
         </div>
         <div className="flex flex-col gap-2 justify-between">
           <span className='text-base16 font-semibold'>User name</span>
-          <UsernameSelector/>
+          <SelectorType items={users} filterName='userName'/>
         </div>
         <InputFilter title='User Id' type="text" filterName='userId'/>
         <div className="flex flex-col gap-2 justify-between">
           <span className='text-base16 font-semibold'>User Type</span>
-          <UserTypeSelector/>
+          <SelectorType items={roles} filterName='role'/>
         </div>
         <InputFilter title='Phone number' type="number" filterName='contactPhone'/>
         <InputFilter title='Email address' type="text" filterName='contactEmail'/>
@@ -28,8 +33,8 @@ const Navbar = () => {
           <StatusFilter/>
         </div>
       </div>
-      <div className='w-full flex items-center justify-center py-[6px] border border-gray-300 rounded-md'>
-        <span className='text-sm font-medium text-gray-normal'>Export Data</span>
+      <div className='w-full flex items-center justify-center py-[6px] border border-gray-300 rounded-md group hover:bg-primary'>
+        <span className='text-sm font-medium text-gray-normal group-hover:text-white'>Export Data</span>
       </div>
     </div>
   )

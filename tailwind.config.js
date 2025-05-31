@@ -9,11 +9,13 @@ export default {
       colors: {
         primary: '#005b86',
         "primary-100": '#294172',
+        "primary-hover": '#014f74',
         "text-primary": '#637381',
         "dark": '#111928',
         "red-dark": '#E10E0E',
         "blue-50": '#E2F5F9',
         "blue-100": '#DAE6EF',
+        "blue-200": '#E6F7FF',
         "blue-300": '#E6EFF3',
         "blue-400": '#2979FF',
         "blue-500": '#007AFF',
@@ -34,6 +36,7 @@ export default {
         "gray-800": '#343434',
         "gray-900": '#767676',
         "gray-normal": '#4A4B57',
+        "text-overlay": '#0C0C0D',
       },
       fontSize: {
         base12: '12px',

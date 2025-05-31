@@ -95,6 +95,7 @@ const userSlice = createSlice({
               return true;
           }
         });
+        state.currentPage = 1;
       }
     },
     sortByColumnName: (
@@ -122,7 +123,6 @@ const userSlice = createSlice({
         return 0;
       });
     }
-
   },
 });
 

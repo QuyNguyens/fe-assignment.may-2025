@@ -9,8 +9,10 @@ const AdministratePage = () => {
         <Header/>
         <div className="flex w-full min-h-screen">
             <Navbar/>
-            <Info/>
-            <PDF/>
+            <div className="flex-1 gap-5 lg:gap-0 grid grid-cols-1 lg:grid-cols-2">
+              <Info/>
+              <PDF/>
+            </div>
         </div>
     </div>
   )

@@ -1,18 +1,15 @@
-interface ToolTipProps{
-    top?: string;
-    left?: string;
-    right?: string;
-    bottom?: string;
-    content: string;
-    background?: string;
-    textColor?: string;
+interface ToolTipProps {
+  content: string;
+  className?: string;
 }
 
-//{top,left,right,bottom,content,background,textColor}
-const ToolTip = ({}: ToolTipProps) => {
+const ToolTip = ({ content, className = '' }: ToolTipProps) => {
   return (
-    <div>ToolTip</div>
-  )
-}
+    <div className={`inline-block ${className}`}>
+        {content}
+        <div className="absolute top-1/2 right-[-8px] transform -translate-y-1/2 w-0 h-0 border-t-8 border-b-8 border-l-8 border-t-transparent border-b-transparent border-dark" />
+    </div>
+  );
+};
 
-export default ToolTip
+export default ToolTip;

@@ -1,0 +1,75 @@
+{
+  "type": "object",
+  "fields": [
+    {
+      "label": "Tỉnh / Thành phố",
+      "name": "province",
+      "type": "select",
+      "options": [
+        { "id": "dn", "label": "Đà Nẵng" },
+        { "id": "hn", "label": "Hà Nội" },
+        { "id": "sg", "label": "Sài Gòn" }
+      ]
+    },
+    {
+      "label": "Quận / Huyện",
+      "name": "district",
+      "type": "select",
+      "dependsOn": "province",
+      "optionsMap": {
+        "dn": [
+          { "id": "hc", "label": "Hải Châu " },
+          { "id": "tk", "label": "Thanh Khê" },
+	  { "id": "lc", "label": "Liên Chiểu" }
+        ],
+        "hn": [
+          { "id": "bv", "label": "Ba Vì" },
+          { "id": "btl", "label": "Bắc Từ Liêm" }
+        ],
+        "sg": [
+          { "id": "bc", "label": "Bình Chánh" },
+          { "id": "gv", "label": "Gò Vấp" }
+        ]
+      }
+    },
+    {
+      "label": "Phường / Xã",
+      "name": "ward",
+      "type": "select",
+      "dependsOn": "district",
+      "optionsMap": {
+        "hc": [
+          { "id": "hcb", "label": "Hòa Cường Bắc" },
+          { "id": "pn", "label": "Phước Ninh" }
+        ],
+        "tk": [
+          { "id": "ak", "label": "An Khê" },
+          { "id": "tt", "label": "Tam Thuận" }
+        ],
+	"lc": [
+          { "id": "hkn", "label": "Hoà Khánh Nam" },
+          { "id": "hm", "label": "Hòa Minh" },
+	  { "id": "hhb", "label": "Hòa Hiệp Bắc" }
+        ],
+        "bv": [
+          { "id": "cs", "label": "Châu Sơn" },
+          { "id": "cm", "label": "Chu Minh" }
+        ],
+        "btl": [
+          { "id": "lm", "label": "Liên Mạc" },
+          { "id": "mk", "label": "Minh Khai" }
+        ],
+        "bc": [
+          { "id": "hl", "label": "Hưng Long" },
+          { "id": "dp", "label": "Đa Phước" }
+        ],
+        "gv": [
+          { "id": "p8", "label": "Phường 8" },
+          { "id": "p9", "label": "Phường 9" },
+	  { "id": "p10", "label": "Phường 10" },
+	  { "id": "p11", "label": "Phường 11" }
+        ]
+      }
+    }
+  ]
+}

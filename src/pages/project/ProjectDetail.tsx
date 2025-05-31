@@ -9,7 +9,7 @@ import PropertiesItem from './PropertiesItem';
 
 const ProjectDetail = () => {
   return (
-    <div className="min-h-screen flex border-t border-gray-200">
+    <div className="min-h-screen flex flex-col lg:flex-row border-t border-gray-200">
       <div className="h-full flex-1 pr-4 border-r border-gray-200">
         <div className="flex items-center py-[5px] gap-2 border-b border-gray-200">
           <img className='w-[18px] h-[18px]' src={DescriptionIcon} alt="" />
@@ -26,7 +26,7 @@ const ProjectDetail = () => {
           </div>
         </div>
         <div className='mt-4'>
-          <span className=' text-primary text-sm font-normal  '>+ Add sub-tickets</span>
+          <span className=' text-primary text-sm font-normal hover:underline'>+ Add sub-tickets</span>
         </div>
         <div className="mt-6 flex items-center py-[5px] gap-2 border-b border-gray-200">
           <img className='w-[18px] h-[18px]' src={DescriptionIcon} alt="" />
@@ -40,6 +40,7 @@ const ProjectDetail = () => {
          
           <img className='absolute bottom-4 right-4 w-[15px] h-[14px]' src={ArrowTopIcon} alt="" />
         </div>
+        <div className='h-44'></div>
       </div>
       <div className='w-[279px]'>
         <div className='flex items-center justify-between py-[5px] pl-3 pr-5 border-b border-gray-200'>

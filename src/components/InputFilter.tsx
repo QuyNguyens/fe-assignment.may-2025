@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { filterByField } from "../features/users/userSlice";
 
@@ -12,6 +12,7 @@ const InputFilter = ({title, type, filterName}: InputFilterProps) => {
     const dispatch = useDispatch();
     const [inputValue, setInputValue] = useState("");
     const [debouncedValue, setDebouncedValue] = useState(inputValue);
+    const hasTypedOnce = useRef(false);
 
     useEffect(() => {
         const handler = setTimeout(() => {
@@ -24,6 +25,11 @@ const InputFilter = ({title, type, filterName}: InputFilterProps) => {
     }, [inputValue]);
 
     useEffect(() => {
+        if (!hasTypedOnce.current) {
+            hasTypedOnce.current = true;
+             return;
+        }
+        console.log('co vao')
         dispatch(filterByField({ field: filterName, value: debouncedValue }));
     }, [debouncedValue, dispatch, filterName]);
 

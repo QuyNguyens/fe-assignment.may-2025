@@ -21,16 +21,15 @@ const InfoDisplay = () => {
   }
 
   const handleSort = (column: string) => {
-    const currentOrder = sortState[column] || 'esc';
-    const newOrder = currentOrder === 'esc' ? 'desc' : 'esc';
+    const currentOrder = sortState[column] || 'desc';
+    const newOrder = currentOrder === 'desc' ? 'esc' : 'desc';
 
     setSortState({ [column]: newOrder });
     dispatch(sortByColumnName({ columnName: column, type: newOrder }));
   };
 
-
   return (
-    <div className="overflow-x-auto" style={{ maxHeight: `${10 * 65}px`}}>
+    <div className="overflow-x-auto" style={{ maxHeight: `${12 * 65}px`}}>
       <table className="min-w-full table-auto border border-gray-200 text-left text-sm">
         <thead className="bg-blue-100">
           <tr>

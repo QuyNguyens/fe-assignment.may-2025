@@ -7,7 +7,7 @@ const Header = () => {
         <img src={ArrowRight} alt="" />
         <span className='text-sm font-medium text-gray-600'>UrapidLoan Project</span>
         <img src={ArrowRight} alt="" />
-        <span className='text-sm text-primary font-normal'>[Ticket name ]</span>
+        <span className='text-sm text-primary hover:underline font-normal'>[Ticket name ]</span>
     </div>
   )
 }
