@@ -1,17 +1,17 @@
-import { useState, type SVGProps } from 'react';
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import type { RootState } from '../app/store';
 import { setActiveItem } from '../features/sidebarSlice';
 
 type Props = {
-    icon: React.FC<SVGProps<SVGSVGElement>>;
-    iconHover: React.FC<SVGProps<SVGSVGElement>>;
+    icon: string;
+    hoverIcon: string;
     text: string;
     isSmall?: boolean;
 }
 
-const IconTextSidebar = ({ icon: Icon, iconHover: IconHover, isSmall, text }: Props) => {
+const IconTextSidebar = ({ icon, hoverIcon, isSmall, text }: Props) => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const activeItem = useSelector((state: RootState) => state.sidebar.activeItem);
   const dispatch = useDispatch();
@@ -34,9 +34,9 @@ const IconTextSidebar = ({ icon: Icon, iconHover: IconHover, isSmall, text }: Pr
       onClick={handleNavigate}
     >
       {isHovered || isActive ? (
-        <IconHover className="w-5 h-5 "/>
+        <img src={hoverIcon} alt="icon" className="w-5 h-5 "/>
       ) : (
-        <Icon className="w-5 h-5"/>
+        <img src={icon} alt="icon" className="w-5 h-5"/>
       )}
       {
         !isSmall &&

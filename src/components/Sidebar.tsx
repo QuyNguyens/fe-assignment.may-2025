@@ -1,18 +1,18 @@
 import Logo from '../assets/logo-company.jpg';
 import LogoEnd from '../assets/LogoEnd.svg';
 import LogoEndSmall from '../assets/LogoEndSmall.svg';
-import OverViewIcon from '../assets/overview-icon.svg?react';
-import OverViewIconHover from '../assets/overview-icon-hover.svg?react';
-import InquiresIcon from '../assets/inquiries-icon.svg?react';
-import InquiresIconHover from '../assets/inquiries-icon-hover.svg?react';
-import EstimatorIcon from '../assets/estimator-icon.svg?react';
-import EstimatorIconHover from '../assets/estimator-icon-hover.svg?react';
-import ProjectsIconHover from '../assets/projects-icon-hover.svg?react';
-import ProjectsIcon from '../assets/projects-icon-h.svg?react';
-import AdministrationsIcon from '../assets/administrations-icon.svg?react';
-import AdministrationsIconHover from '../assets/administrations-icon-hover.svg?react';
-import DocumentationIcon from '../assets/documentdation-icon.svg?react';
-import DocumentationIconHover from '../assets/documentdation-icon-hover.svg?react';
+import OverViewIcon from '../assets/overview-icon.svg';
+import OverViewHoverIcon from '../assets/overview-icon-hover.svg';
+import InquiresIcon from '../assets/inquiries-icon.svg';
+import InquiresHoverIcon from '../assets/inquiries-icon-hover.svg';
+import EstimatorIcon from '../assets/estimator-icon.svg';
+import EstimatorHoverIcon from '../assets/estimator-icon-hover.svg';
+import ProjectsHoverIcon from '../assets/projects-icon-hover.svg';
+import ProjectsIcon from '../assets/projects-icon-h.svg';
+import AdministrationsIcon from '../assets/administrations-icon.svg';
+import AdministrationsHoverIcon from '../assets/administrations-icon-hover.svg';
+import DocumentationIcon from '../assets/documentdation-icon.svg';
+import DocumentationHoverIcon from '../assets/documentdation-icon-hover.svg';
 import RiverflowIcon from '../assets/river-flow-icon.svg';
 import IconTextSidebar from './IconTextSidebar';
 import { useLocation } from 'react-router-dom';
@@ -42,14 +42,14 @@ const Sidebar = ({width, isSmall}: SidebarProps) => {
         </div>
         <div className='h-full flex flex-col justify-between'>
             <div className='flex flex-col gap-2'>
-                <IconTextSidebar icon={OverViewIcon} iconHover={OverViewIconHover} text='Overview' isSmall={isSmall}/>
-                <IconTextSidebar icon={InquiresIcon} iconHover={InquiresIconHover} text='Inquiries' isSmall={isSmall}/>
-                <IconTextSidebar icon={EstimatorIcon} iconHover={EstimatorIconHover} text='Estimator' isSmall={isSmall}/>
-                <IconTextSidebar icon={ProjectsIcon} iconHover={ProjectsIconHover} text='Projects' isSmall={isSmall}/>
+                <IconTextSidebar icon={OverViewIcon} hoverIcon={OverViewHoverIcon} text='Overview' isSmall={isSmall}/>
+                <IconTextSidebar icon={InquiresIcon} hoverIcon={InquiresHoverIcon} text='Inquiries' isSmall={isSmall}/>
+                <IconTextSidebar icon={EstimatorIcon} hoverIcon={EstimatorHoverIcon} text='Estimator' isSmall={isSmall}/>
+                <IconTextSidebar icon={ProjectsIcon} hoverIcon={ProjectsHoverIcon} text='Projects' isSmall={isSmall}/>
             </div>
             <div className='flex flex-col gap-2'>
-                <IconTextSidebar icon={AdministrationsIcon} iconHover={AdministrationsIconHover} text='Administrations' isSmall={isSmall}/>
-                <IconTextSidebar icon={DocumentationIcon} iconHover={DocumentationIconHover} text='Documentation' isSmall={isSmall}/>
+                <IconTextSidebar icon={AdministrationsIcon} hoverIcon={AdministrationsHoverIcon} text='Administrations' isSmall={isSmall}/>
+                <IconTextSidebar icon={DocumentationIcon} hoverIcon={DocumentationHoverIcon} text='Documentation' isSmall={isSmall}/>
                 {!isSmall ? <div className='flex items-center justify-between px-4 py-[11px]'>
                     <img className='w-[134px] h-8' src={LogoEnd} alt="" />
                     <img className='w-[18px] h-[18px]' src={RiverflowIcon} alt="" />
