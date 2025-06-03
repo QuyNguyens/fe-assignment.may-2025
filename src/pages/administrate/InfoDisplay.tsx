@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import type { RootState } from '../../app/store';
-import { toggleSelect, toggleAll, sortByColumnName } from '../../features/users/userSlice';
+import { toggleSelect, toggleAll, sortByColumnName } from '../../features/userSlice';
 import Avatar from '../../assets/avatar.png';
 import { useState } from 'react';
 

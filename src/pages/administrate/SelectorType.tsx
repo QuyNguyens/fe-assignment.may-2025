@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux';
-import { filterByField } from '../../features/users/userSlice';
+import { filterByField } from '../../features/userSlice';
 import ArrowDownIcon from '../../assets/arrow-down-icon-gray.svg';
 
 interface SelectorTypeProps{

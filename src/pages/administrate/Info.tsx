@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import type { RootState } from '../../app/store';
 import InfoDisplay from './InfoDisplay';
 import Pagination from './Pagination';
-import { setCurrentPage } from '../../features/users/userSlice';
+import { setCurrentPage } from '../../features/userSlice';
 import ItemsPerPage from './ItemsPerPage';
 
 

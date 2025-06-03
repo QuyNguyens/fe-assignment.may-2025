@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom"
-import { setActiveItem } from "../features/users/sidebarSlice";
+import { setActiveItem } from "../features/sidebarSlice";
 
 const Home = () => {
     const navigate = useNavigate();

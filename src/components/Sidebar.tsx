@@ -17,7 +17,7 @@ import RiverflowIcon from '../assets/river-flow-icon.svg';
 import IconTextSidebar from './IconTextSidebar';
 import { useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { setActiveItem } from '../features/users/sidebarSlice';
+import { setActiveItem } from '../features/sidebarSlice';
 
 interface SidebarProps{
     width: string;

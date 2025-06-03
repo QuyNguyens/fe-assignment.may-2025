@@ -8,7 +8,7 @@ interface WorkPackageItemProps{
 
 const WorkPackageItem = ({title, desc}: WorkPackageItemProps) => {
   return (
-    <div className="p-3 w-[296px] flex flex-col gap-4 border border-gray-200 rounded">
+    <div className="p-3 flex flex-col gap-4 border border-gray-200 rounded">
         <div className="flex justify-between items-center">
             <h1 className="text-base18 font-medium">{title}</h1>
             <img className='w-[10px] h-[14px]' src={ArrowRight} alt="" />

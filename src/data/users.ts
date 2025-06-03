@@ -1,4 +1,4 @@
-import type { User } from "../features/users/userSlice";
+import type { User } from "../features/userSlice";
 
 export const Users : User [] = [
   {

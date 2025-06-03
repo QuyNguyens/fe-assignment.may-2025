@@ -2,7 +2,7 @@ import { useState, type SVGProps } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import type { RootState } from '../app/store';
-import { setActiveItem } from '../features/users/sidebarSlice';
+import { setActiveItem } from '../features/sidebarSlice';
 
 type Props = {
     icon: React.FC<SVGProps<SVGSVGElement>>;

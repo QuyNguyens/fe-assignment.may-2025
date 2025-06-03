@@ -2,7 +2,7 @@ import { useState } from 'react'
 import ArrowDownIcon from '../../assets/arrow-down-text.svg';
 import { useDispatch, useSelector } from 'react-redux';
 import type { RootState } from '../../app/store';
-import {setItemsPerPage} from '../../features/users/userSlice';
+import {setItemsPerPage} from '../../features/userSlice';
 
 const perPage = [5,7,10,12];
 

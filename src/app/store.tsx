@@ -1,8 +1,8 @@
 // store.ts
 import { configureStore } from '@reduxjs/toolkit';
-import usersReducer from '../features/users/userSlice';
-import addressReducer from '../features/users/addressSlice';
-import sidebarReducer from '../features/users/sidebarSlice';
+import usersReducer from '../features/userSlice';
+import addressReducer from '../features/addressSlice';
+import sidebarReducer from '../features/sidebarSlice';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage'; // lưu vào localStorage
 

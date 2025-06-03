@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { filterByField } from '../../features/users/userSlice';
+import { filterByField } from '../../features/userSlice';
 
 const options = ['All', 'Active', 'InActive'];
 

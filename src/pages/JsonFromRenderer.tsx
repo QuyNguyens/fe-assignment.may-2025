@@ -2,7 +2,7 @@ import React, { useState, type ChangeEvent, type FormEvent } from "react";
 import { JSONHighlight } from "./JsonHightLight";
 import { AddressSelector } from "./AddressSelector";
 import { useDispatch, useSelector } from "react-redux";
-import { setSchemaFields } from "../features/users/addressSlice";
+import { setSchemaFields } from "../features/addressSlice";
 import type { RootState } from "../app/store";
 import { useNavigate } from "react-router-dom";
 type FieldOption = {

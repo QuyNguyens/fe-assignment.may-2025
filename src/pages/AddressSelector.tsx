@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import type { RootState } from "../app/store";
 import { useDispatch, useSelector } from "react-redux";
-import { resetAddress, setField, setStreetAddress } from "../features/users/addressSlice";
+import { resetAddress, setField, setStreetAddress } from "../features/addressSlice";
 import ArrowDownIcon from '../assets/arrow-down-icon-gray.svg';
 type Option = { id: string; label: string };
 
