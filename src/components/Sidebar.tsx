@@ -14,10 +14,7 @@ import AdministrationsHoverIcon from '../assets/administrations-icon-hover.svg';
 import DocumentationIcon from '../assets/documentdation-icon.svg';
 import DocumentationHoverIcon from '../assets/documentdation-icon-hover.svg';
 import RiverflowIcon from '../assets/river-flow-icon.svg';
-import IconTextSidebar from './IconTextSidebar';
-import { useLocation } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { setActiveItem } from '../features/sidebarSlice';
+import NavItem from './NavItem';
 
 interface SidebarProps{
     width: string;
@@ -26,11 +23,6 @@ interface SidebarProps{
 
 const Sidebar = ({width, isSmall}: SidebarProps) => {
 
-    const dispatch = useDispatch();
-
-    const location = useLocation();
-    const path = location.pathname.split('/')[1];
-    dispatch(setActiveItem(path));
   return (
     <div className={`${width} p-3 min-h-screen bg-gray-50 flex flex-col gap-8`}>
         <div className="flex gap-3 mt-1">
@@ -42,14 +34,15 @@ const Sidebar = ({width, isSmall}: SidebarProps) => {
         </div>
         <div className='h-full flex flex-col justify-between'>
             <div className='flex flex-col gap-2'>
-                <IconTextSidebar icon={OverViewIcon} hoverIcon={OverViewHoverIcon} text='Overview' isSmall={isSmall}/>
-                <IconTextSidebar icon={InquiresIcon} hoverIcon={InquiresHoverIcon} text='Inquiries' isSmall={isSmall}/>
-                <IconTextSidebar icon={EstimatorIcon} hoverIcon={EstimatorHoverIcon} text='Estimator' isSmall={isSmall}/>
-                <IconTextSidebar icon={ProjectsIcon} hoverIcon={ProjectsHoverIcon} text='Projects' isSmall={isSmall}/>
+                <NavItem to="/overview" icon={OverViewIcon} activeIcon={OverViewHoverIcon} label='Overview' isSmall={isSmall}/>
+                <NavItem to="/inquiries" icon={InquiresIcon} activeIcon={InquiresHoverIcon} label='Inquiries' isSmall={isSmall}/>
+                <NavItem to="/estimator" icon={EstimatorIcon} activeIcon={EstimatorHoverIcon} label='Estimator' isSmall={isSmall}/>
+                <NavItem to="/projects" icon={ProjectsIcon} activeIcon={ProjectsHoverIcon} label='Projects' isSmall={isSmall}/>
             </div>
             <div className='flex flex-col gap-2'>
-                <IconTextSidebar icon={AdministrationsIcon} hoverIcon={AdministrationsHoverIcon} text='Administrations' isSmall={isSmall}/>
-                <IconTextSidebar icon={DocumentationIcon} hoverIcon={DocumentationHoverIcon} text='Documentation' isSmall={isSmall}/>
+                <NavItem to="/administrations" icon={AdministrationsIcon} activeIcon={AdministrationsHoverIcon} label='Administrations' isSmall={isSmall}/>
+                <NavItem to="/Documentation" icon={DocumentationIcon} activeIcon={DocumentationHoverIcon} label='Documentation' isSmall={isSmall}/>
+               
                 {!isSmall ? <div className='flex items-center justify-between px-4 py-[11px]'>
                     <img className='w-[134px] h-8' src={LogoEnd} alt="" />
                     <img className='w-[18px] h-[18px]' src={RiverflowIcon} alt="" />

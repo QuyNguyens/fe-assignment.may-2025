@@ -2,7 +2,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import usersReducer from '../features/userSlice';
 import addressReducer from '../features/addressSlice';
-import sidebarReducer from '../features/sidebarSlice';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage'; // lưu vào localStorage
 
@@ -11,13 +10,12 @@ import { combineReducers } from 'redux';
 const rootReducer = combineReducers({
   users: usersReducer,
   address: addressReducer,
-  sidebar: sidebarReducer,
 });
 
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['users','address','sidebar'],
+  whitelist: ['users','address'],
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
