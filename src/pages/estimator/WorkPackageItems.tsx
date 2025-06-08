@@ -12,7 +12,7 @@ interface WorkPackageItemsProps{
 const WorkPackageItems = ({items} : WorkPackageItemsProps) => {
 
   return (
-    <div className="grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-x-6 gap-y-4">
+    <div className="grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-x-9 gap-y-6">
         {
             items.map((item, index) =>{
                 return <WorkPackageItem key={index} title={item.title} desc={item.desc}/>

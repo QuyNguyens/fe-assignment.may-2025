@@ -64,12 +64,12 @@ const WorkPackage = () => {
     }
 
   return (
-    <div className="ml-12 mr-20 mt-4 flex-1 flex flex-col">
+    <div className="ml-12 mr-28 mt-4 flex-1 flex flex-col">
         <h2 className="text-xl text-gray-800">Work Packages (WP)</h2>
         <div className="mt-5 flex flex-1 gap-5">
             <div className="w-[200px] flex flex-col justify-between">
                 <div className="flex flex-col gap-4">
-                    <div className="w-fit px-1 py-[3px] inline-block border border-gray-200 rounded">
+                    <div className="w-full px-1 py-[3px] inline-block border border-gray-200 rounded">
                         <span
                             onClick={() => setActiveTab("rfx")}
                             className={`text-sm font-normal px-3 rounded cursor-pointer ${
@@ -83,7 +83,7 @@ const WorkPackage = () => {
 
                         <span
                             onClick={() => setActiveTab("custom")}
-                            className={`text-sm font-normal px-3 rounded cursor-pointer ${
+                            className={`text-sm font-normal px-2 rounded cursor-pointer ${
                             activeTab === "custom"
                                 ? "text-primary bg-blue-50"
                                 : "text-gray-600 bg-transparent"
@@ -92,7 +92,7 @@ const WorkPackage = () => {
                             Custom WPs
                         </span>
                     </div>
-                    <h3 className="text-[18px] font-medium text-gray-800">Categories</h3>
+                    <h3 className="text-base18 font-medium text-gray-800">Categories</h3>
                     <div className="mt-2 flex flex-col gap-1">
                         {activeTab === 'rfx' ? items.map((item) => (
                             <TextBorderBottom

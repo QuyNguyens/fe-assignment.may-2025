@@ -11,7 +11,7 @@ const Navbar = () => {
   const roles = [...new Set(userFull.map(user => user.role))];
 
   return (
-    <div className="flex flex-col justify-between w-[253px] p-3 border-r border-gray-300">
+    <div className="flex flex-col justify-between w-[253px] p-3">
       <div className="flex flex-col gap-4">
         <div className="flex justify-between py-[10px] border-b border-gray-300">
           <span className="text-gray-900 text-base16 font-medium">FILTER</span>

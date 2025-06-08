@@ -14,9 +14,9 @@ const Info = () => {
 
   const dispatch = useDispatch();
   return (
-      <div className="flex flex-col justify-between border-r border-gray-300">
+      <div className="flex flex-col justify-between border-l border-r border-gray-300">
         <div>
-          <div className="flex items-center gap-3 py-[14px] pl-3">
+          <div className="flex items-cen  ter gap-3 py-[14px] pl-3">
             <span className="text-primary-100 text-xl font-bold">{totalUsers} USERS</span>
             <img className='w-[18px] h-[18px]' src={RotateIcon} alt="" />
           </div>

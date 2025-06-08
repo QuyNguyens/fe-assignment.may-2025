@@ -39,7 +39,7 @@ const Header = () => {
             <div className='relative'>
                 <img className='w-[25px] h-[26px]' src={RangIcon} alt="" />
                 <div className='absolute left-1/2 -top-1 w-4 h-4 rounded-full bg-red-dark flex justify-center items-center'>
-                    <span className='text-[10px] font-medium text-white'>1</span>
+                    <span className='text-base10 font-medium text-white'>1</span>
                 </div>
             </div>  
             <img className='w-[25px] h-[26px]' src={SettingsIcon} alt="" />

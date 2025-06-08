@@ -35,14 +35,14 @@ const ProjectDetail = () => {
         <Activity/>
         <div className="relative mt-1 w-full">
           <textarea
-            className="w-full h-[90px] p-4 pl-10 pr-10 rounded-lg bg-gray-500 text-[12px]  resize-none focus:outline-none"
+            className="w-full h-[90px] p-4 pl-10 pr-10 rounded-lg bg-gray-500 text-base12  resize-none focus:outline-none"
             placeholder="Leave a comment ..."/>
          
           <img className='absolute bottom-4 right-4 w-[15px] h-[14px]' src={ArrowTopIcon} alt="" />
         </div>
         <div className='h-44'></div>
       </div>
-      <div className='w-[279px]'>
+      <div className='w-[275px]'>
         <div className='flex items-center justify-between py-[5px] pl-3 pr-5 border-b border-gray-200'>
           <div className='flex gap-2 items-center'>
             <span className='text-base16 text-gray-600 font-normal'>Properties</span>
@@ -57,7 +57,6 @@ const ProjectDetail = () => {
             <PropertiesItem name='Type' content='Bug' color='text-gray-600'/>
             <PropertiesItem name='Stated date:' content='2025-04-04' color='text-gray-600'/>
             <PropertiesItem name='Target date:' content='2025-04-04' color='text-gray-600'/>
-            
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
-import type { Field } from "../../pages/AddressSelector";
+import type { Field } from "../pages/AddressSelector"; 
 
 interface AddressState {
   formData: Record<string, string>;

@@ -26,7 +26,7 @@ function NavItem({ to, icon, activeIcon, label, isSmall }: NavItemProps) {
       <img src={isActive || isHovered ? activeIcon : icon} alt="" className="h-5 w-5" />
       {
         !isSmall &&
-        <span className={`text-base font-medium
+        <span className={`text-base font-medium font-ibmFlexSans
           ${isActive || isHovered ? 'text-primary' : 'text-gray-600'}`}>
           {label}
         </span>
